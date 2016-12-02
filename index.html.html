@@ -18,16 +18,54 @@
 
 <h4>Wrong guesses: <span id = "wrongs"></span></h4>
 
+<br><br><br><br><br><br>
+<h5>Reload for new word</h5>
+
   <script type="text/javascript">
 
-  	var guessesLeft = 7;
-  	var word ="purple";
-  	var hangword = ["-","-","-","-","-","-"];
-  	var stringWord = "------";
+  	var guessesLeft = 9;
+  	// var word ="purple";
+  	var wordDic = ["purple", "rumplestiltskins","easy","difficulty","charlotte","raintree","mountains","ocean","pepperoni","gypsy"];
+
+  	// create hangWord, create stringWord, pick word
+
+  	var hangWord = [];
+  	var stringWord="-";
   	var wrongLetters = [];
   	var wrongString;
   	var alph = ("abcdefghijklmnopqrstuvwxyz").split("");
 
+  	// initial method calls
+
+  	var word = pickWord();
+  	createHangWord();
+  	createStringWord();
+
+  	console.log(stringWord);
+  	console.log(hangWord);
+
+
+  	// create hangWord, create stringWord, pick word
+
+	function pickWord(){
+		var r = Math.floor(Math.random() * 10);
+		var word = wordDic[r];
+		console.log(word);
+		console.log(r);
+		return word;
+	}
+
+	function createHangWord(){
+		for (i = 0; i < word.length; i++){
+			hangWord.push("-");
+		}
+	}
+
+	function createStringWord(){
+		for (i = 0; i < word.length-1; i++){
+			stringWord += "-";
+		}
+	}
 
   	function isGuessRight(guess){
   		for (i = 0; i < word.length; i++) {
@@ -49,13 +87,13 @@
   	function addGuess(guess, replaceIndex) {
   		for (i in replaceIndex) {
   			var x = replaceIndex[i];
-  			hangword[x] = guess;
+  			hangWord[x] = guess;
   		}
   	}
 
   	function win() {
-  		for (i in hangword) {
-  			if (hangword[i] === "-"){
+  		for (i in hangWord) {
+  			if (hangWord[i] === "-"){
   				return false;
   			}
   		}
@@ -92,11 +130,11 @@
   	document.onkeyup = function (event) {
   			var letter = event.key;
   			letter = letter.toLowerCase();
-  			if(isLetter(letter)){
+  			if(isLetter(letter) && guessesLeft > 0){
 	  			addGuess(letter, replaceCorrects(letter));
-	  			console.log(hangword);
+	  			console.log(hangWord);
 	  			console.log(win());
-	  			stringWord = hangword.join("");
+	  			stringWord = hangWord.join("");
 	  			document.getElementById("word").innerHTML = stringWord;
 	  			if (win()){
 	  				document.getElementById("win").innerHTML = "YOU WIN!";
