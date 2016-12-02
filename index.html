@@ -146,8 +146,13 @@
   	}
 
   	document.onkeyup = function (event) {
-  			var letter = event.key;
-  			letter = letter.toLowerCase();
+      //old key detection
+  			// var letter = event.key;
+  			// letter = letter.toLowerCase();
+
+        //new key detection
+        var letter = String.fromCharCode(event.keyCode).toLowerCase();
+        console.log(letter);
   			if(isLetter(letter) && guessesLeft > 0){
 	  			addGuess(letter, replaceCorrects(letter));
 	  			console.log(hangWord);
