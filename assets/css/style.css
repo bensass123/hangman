@@ -1,19 +1,49 @@
 .container {
-	width: 600px;
+	width: 700px;
+	height:900px;
 }
 
 .word{
-    letter-spacing: 14px;
+    letter-spacing: 10px;
+    text-align: center;
+}
+
+.jumbotron {
+	width: 307px;
+	padding-right: 45px;
+	padding-left: 45px;
 }
 
 .win {
-
+	position: relative;
+	left: 82px;
 }
 
 .guesses {
-
+	font-family: 'Cinzel', serif;
+	position: relative;
+	left: 41px;
 }
 
-.wrong {
+.wrongs {
+    font-family: 'Walter Turncoat', cursive;
+    position: relative;
+    top: 32px;
+    left: 18px;
+}
+
+.newword{
+    position: relative;
+    top: 172px;
+    left: 13px;
+}
+
+.title{
+	font-family: 'Bungee Shade', cursive;
+	position: relative;
+    left: 43px;
+}
+
+.container2{
 
 }

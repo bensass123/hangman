@@ -6,6 +6,7 @@
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Cinzel|Eagle+Lake|Walter+Turncoat" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
   </head>
@@ -13,19 +14,24 @@
 
 <div class="container">
   <div class="panel panel-primary">
-    <div class="panel-body">
-      <h1>HANGMAN</h1>
+    <div class="panel-body"  style="min-height: 600px;">
+      <h1 class="title">HANGMAN</h1>
+
+      <div class="jumbotron">
+        <div class="container2">
+          <h4 id ="word" class="word"></h4>         
+        </div>
+      </div>
 
 
-      <h2 id ="word" class="word"></h2><br>
       <h2 id ="win" class="win"></h2>
 
       <h2 class ="guesses">Guesses left: <span id = "guesses">7</span></h2>
 
       <h4 class="wrongs">Wrong guesses: <span id = "wrongs"></span></h4>
 
-      <br><br><br><br><br><br>
-      <h5>For new word:</h5><input type="button" value="Refresh Page" onClick="window.location.reload()">
+      <div class="newword">
+      <h5>For new word:</h5><input type="button" value="Refresh Page" onClick="window.location.reload()"></div>
 
     </div>
   </div>
