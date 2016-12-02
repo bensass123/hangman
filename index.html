@@ -2,30 +2,40 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>title</title>
+    <title>Hangman</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 
   </head>
 <body>
 
+<div class="container">
+  <div class="panel panel-primary">
+    <div class="panel-body">
+      <h1>HANGMAN</h1>
 
-	<h1> HANGMAN</h1>
 
+      <h2 id ="word" class="word"></h2><br>
+      <h2 id ="win" class="win"></h2>
 
-<p id ="word"></p><br>
-<h2 id ="win"></h2>
+      <h2 class ="guesses">Guesses left: <span id = "guesses">7</span></h2>
 
-<h2>Guesses left: <span id = "guesses">7</span></h2>
+      <h4 class="wrongs">Wrong guesses: <span id = "wrongs"></span></h4>
 
-<h4>Wrong guesses: <span id = "wrongs"></span></h4>
+      <br><br><br><br><br><br>
+      <h5>Reload for new word</h5>
 
-<br><br><br><br><br><br>
-<h5>Reload for new word</h5>
+    </div>
+  </div>
+</div>
 
   <script type="text/javascript">
 
   	var guessesLeft = 9;
   	// var word ="purple";
-  	var wordDic = ["purple", "america","easy","difficulty","charlotte","raintree","mountains","ocean","pepperoni","gypsy","bufoon","growth","strength","dominate","welcome","reinforce"];
+  	var wordDic = ["purple", "america","easy","difficulty","charlotte","raintree","mountains","ocean","pepperoni","gypsy","bufoon","growth","strength","dominate","welcome","reinforce","stalwart","pockets"];
 
   	// create hangWord, create stringWord, pick word
 
