@@ -41,7 +41,7 @@
 
   	var guessesLeft = 9;
   	// var word ="purple";
-  	var wordDic = ["purple", "america","easy","difficulty","charlotte","raintree","mountains","ocean","pepperoni","gypsy","bufoon","growth","strength","dominate","welcome","reinforce","stalwart","pockets"];
+  	var wordDic = ["purple", "america","easy","difficulty","charlotte","raintree","mountains","ocean","pepperoni","gypsy","bufoon","growth","strength","dominate","welcome","reinforce","stalwart","pockets","calabash","rutabega"];
 
   	// create hangWord, create stringWord, pick word
 
@@ -52,6 +52,8 @@
   	var alph = ("abcdefghijklmnopqrstuvwxyz").split("");
 
   	// initial method calls
+
+    document.getElementById("guesses").innerHTML = guessesLeft;
 
   	var word = pickWord();
   	createHangWord();
