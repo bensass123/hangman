@@ -20,13 +20,13 @@
 }
 
 .guesses {
-	font-family: 'Cinzel', serif;
+/*	font-family: 'Cinzel', serif;*/
 	position: relative;
 	left: 41px;
 }
 
 .wrongs {
-    font-family: 'Walter Turncoat', cursive;
+/*    font-family: 'Walter Turncoat', cursive;*/
     position: relative;
     top: 32px;
     left: 18px;
