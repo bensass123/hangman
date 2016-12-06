@@ -17,43 +17,63 @@
     text-align: center;
 }
 
-.jumbotron {
+.jumboClass {
 	width: 307px;
 	padding-right: 45px;
 	padding-left: 45px;
 	color: black;
+	position: relative;
+	top: 10px;
+	font-family: 'Arial', sans-serif;
+	
 }
 
 .win {
+	width: 200px;
+	text-align: center;
 	position: relative;
-	left: 82px;
+	left: 43px;
 }
 
 .guesses {
 /*	font-family: 'Cinzel', serif;*/
+	font-family: 'Hirosht', sans-serif;
 	position: relative;
-	left: 41px;
+	left: 43px;
+	width: 200px;
+    text-align: center;
 }
 
 .wrongs {
-/*    font-family: 'Walter Turncoat', cursive;*/
+	letter-spacing: 4px;
+	font-family: 'Takeout', sans-serif;
     position: relative;
     top: 32px;
-    left: 18px;
+    left: 43px;
+    width: 200px;
+    text-align: center;
 }
 
 .newword{
     position: relative;
-    top: 172px;
-    left: 13px;
+    top: 126px;
+    left: 43px;
+    width: 200px;
+    text-align: center;
 }
 
 .title{
-	font-family: 'Bungee Shade', cursive;
+/*	font-family: 'Bungee Shade', cursive;*/
+	font-family: 'Hirosht', sans-serif;
 	position: relative;
-    left: 43px;
+    left: 442px;
     text-align: center;
-    color: black;
+    color: white;
+    background: crimson;
+    border-radius: 25px;
+    width: 31%;
+    padding: 5px;
+    padding-top: 9px;
 }
 
 .container2{
@@ -62,7 +82,7 @@
 
 .man {
 	position: absolute;
-	top: 90px;
+	top: 103px;
 	bottom: 0;
 	left: 600px;
 	border-radius: 25px;
@@ -70,15 +90,43 @@
     background: white;
 }
 
-body {
+.winnerStory{
 	color: red;
+    position: absolute;
+    top: 201px;
+    left: 734px;
+    width: 200px;
+    font-size: 22px;
+    text-align: center;
+    font-family: 'Takeout', sans-serif;
+}
+
+body {
+	color: #ffff00;
+	background-image: url("../images/sumopattern.jpg");
+	font-family: 'Hirosht', sans-serif;
+	
 
 /*	background-size: auto, cover;
 	background: url("../images/sumobg.jpg");
 	background-size: 100% 100%;
     background-repeat: no-repeat*/
-
 }
+
+@font-face {
+  font-family: "Hirosht";
+  src: url("../fonts/hirosht.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Takeout";
+  src: url("../fonts/chinesetakeaway.ttf") format("truetype");
+}
+
+
+
+
+
 
 
 

@@ -147,6 +147,11 @@
   		return false;
   	}
 
+    function youWin() {
+      document.getElementById("man").style.height = "0px";
+      document.getElementById("win").innerHTML = "YOU WIN!";
+    }
+
   	document.onkeyup = function (event) {
       //old key detection
   			// var letter = event.key;
@@ -162,7 +167,7 @@
 	  			stringWord = hangWord.join("");
 	  			document.getElementById("word").innerHTML = stringWord;
 	  			if (win()){
-	  				document.getElementById("win").innerHTML = "YOU WIN!";
+	  				youWin();
 	  			}
 	  			if (!isGuessRight(letter)) {
 	  				addWrong(letter);

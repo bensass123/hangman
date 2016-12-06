@@ -16,18 +16,25 @@
   </head>
 <body onload="drawSumo();">
 
-<h1 class="title">SUMO HANGMAN</h1>
+
+  <h1 class="title">SUMO HANG</h1>
+
+
+
+
 
 <div class="container">
   <div class="panel panel-primary">
     <div id ="panelId" class="panel-body"  style="min-height: 600px;">
       
 
-      <div class="jumbotron">
+      <div class="jumbotron jumboClass">
         <div class="container2">
           <h4 id ="word" class="word"></h4>         
         </div>
       </div>
+
+      <p class ="winnerStory">You have saved King Sumo, the ruler of all Sumos. He rewards you with a bag of Sumo Gold and 40 lbs of rice.</p>
 
 
       <h2 id ="win" class="win"></h2>
@@ -37,7 +44,8 @@
       <h4 class="wrongs">Wrong guesses: <span id = "wrongs"></span></h4>
 
       <div class="newword">
-      <h5>For new word:</h5><input type="button" value="Refresh Page" onClick="window.location.reload()"></div>
+        <h5>For new word:</h5><input type="button" style = "color:black;" value="Refresh Page" onClick="window.location.reload()">
+      </div>
 
       
       
