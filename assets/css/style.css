@@ -115,12 +115,12 @@ body {
 
 @font-face {
   font-family: "Hirosht";
-  src: url("../fonts/hirosht.ttf") format("truetype");
+  src: url("../images/hirosht.ttf") format("truetype");
 }
 
 @font-face {
   font-family: "Takeout";
-  src: url("../fonts/chinesetakeaway.ttf") format("truetype");
+  src: url("../images/chinesetakeaway.ttf") format("truetype");
 }
 
 
