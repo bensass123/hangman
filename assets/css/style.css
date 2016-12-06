@@ -1,6 +1,6 @@
 .container {
 	width: 800px;
-	height:900px;
+	/*height:900px;*/
 }
 
 .word{
@@ -42,6 +42,7 @@
 	font-family: 'Bungee Shade', cursive;
 	position: relative;
     left: 43px;
+    text-align: center;
 }
 
 .container2{
@@ -50,12 +51,12 @@
 
 .man {
 	position: absolute;
-	top: 0;
+	top: 72px;
 	bottom: 0;
 	left: 614px;
 /*	border: 1px solid;*/
 }
 
-.deathPanel {
+/*.deathPanel {
 	background-color: #494949;
-}
+}*/

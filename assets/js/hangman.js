@@ -102,8 +102,34 @@
           }
 
           if (guessesLeft === 0) {
-            document.getElementById("man").className = "man"; 
-            document.getElementById("panelId").className = "panel-body deathPanel";
+
+            // show sumoDying.png
+
+            var canvas = document.getElementById("man");
+            var ctx = canvas.getContext("2d");
+            var imageObj = new Image();
+            imageObj.src=("assets/images/sumoDying.png");
+            imageObj.onload = function(){
+              ctx.drawImage(imageObj, 1, 1);
+            }
+
+            // add delay
+            var delay=1500; //1.5 seconds
+
+            // show final frame 
+
+            setTimeout(function() {
+              //stops shaking
+              document.getElementById("man").className = "man"; 
+              var canvas = document.getElementById("man");
+              var ctx = canvas.getContext("2d");
+              var imageObj = new Image();
+              imageObj.src=("assets/images/sumo0.png");
+              imageObj.onload = function(){
+                ctx.drawImage(imageObj, 1, 1);
+              }
+            }, delay);            
+          
           }
 
 	  			document.getElementById("guesses").innerHTML = guessesLeft;
@@ -157,7 +183,8 @@
             var imageObj = new Image();
             imageObj.src=("assets/images/sumo" + sumoStatus + ".png");
             imageObj.onload = function(){
-              ctx.drawImage(imageObj, 1, 1);
+              if (sumoStatus != 0)
+                ctx.drawImage(imageObj, 1, 1);
             }
     }
 
