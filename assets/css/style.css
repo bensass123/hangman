@@ -1,5 +1,5 @@
 .container {
-	width: 700px;
+	width: 800px;
 	height:900px;
 }
 
@@ -46,4 +46,16 @@
 
 .container2{
 
+}
+
+.man {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 614px;
+/*	border: 1px solid;*/
+}
+
+.deathPanel {
+	background-color: #494949;
 }

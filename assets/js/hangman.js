@@ -1,4 +1,4 @@
-    var guessesLeft = 15;
+    var guessesLeft = 9;
   	// var word ="purple";
   	var wordDic = ["purple", "america","easy","difficulty","charlotte","mountains","ocean","pepperoni","gypsy","buffoon","growth","strength","dominate","welcome","reinforce","stalwart","pockets","rutabaga"];
 
@@ -9,8 +9,13 @@
   	var wrongLetters = [];
   	var wrongString;
   	var alph = ("abcdefghijklmnopqrstuvwxyz").split("");
+    var sumoStatus = guessesLeft;
+    
 
   	// initial method calls
+
+    //draw sumo
+    window.addEventListener("load", drawSumo());
 
     document.getElementById("guesses").innerHTML = guessesLeft;
 
@@ -25,7 +30,7 @@
   	// create hangWord, create stringWord, pick word
 
 	function pickWord(){
-    var n = wordDic.length-1;
+    var n = wordDic.length;
 		var r = Math.floor(Math.random() * n);
 		var word = wordDic[r];
 		console.log(word);
@@ -90,6 +95,17 @@
   	function addWrong(char) {
   			if (!isInWrongs(char)) {
   				guessesLeft -= 1;
+          sumoStatus = guessesLeft;
+          drawSumo();
+          if (guessesLeft === 2) {
+            document.getElementById("man").className = "man shake-slow shake-constant"; 
+          }
+
+          if (guessesLeft === 0) {
+            document.getElementById("man").className = "man"; 
+            document.getElementById("panelId").className = "panel-body deathPanel";
+          }
+
 	  			document.getElementById("guesses").innerHTML = guessesLeft;
 	  			wrongLetters.push(char);
 	  			wrongString = wrongLetters.join("");
@@ -133,6 +149,17 @@
   			}
 
   	}
+
+    function drawSumo() {
+
+            var canvas = document.getElementById("man");
+            var ctx = canvas.getContext("2d");
+            var imageObj = new Image();
+            imageObj.src=("assets/images/sumo" + sumoStatus + ".png");
+            imageObj.onload = function(){
+              ctx.drawImage(imageObj, 1, 1);
+            }
+    }
 
   	
 
