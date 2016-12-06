@@ -1,6 +1,15 @@
 .container {
 	width: 800px;
 	/*height:900px;*/
+	/*background-image: url("../images/sumobg.jpg");*/
+}
+
+.panel {
+	background-size: auto, cover;
+	background: url("../images/sumobg.jpg");
+	background-size: 100% 100%;
+    background-repeat: no-repeat;
+	
 }
 
 .word{
@@ -12,6 +21,7 @@
 	width: 307px;
 	padding-right: 45px;
 	padding-left: 45px;
+	color: black;
 }
 
 .win {
@@ -43,6 +53,7 @@
 	position: relative;
     left: 43px;
     text-align: center;
+    color: black;
 }
 
 .container2{
@@ -51,11 +62,25 @@
 
 .man {
 	position: absolute;
-	top: 72px;
+	top: 90px;
 	bottom: 0;
-	left: 614px;
-/*	border: 1px solid;*/
+	left: 600px;
+	border-radius: 25px;
+    padding-left: 12px;
+    background: white;
 }
+
+body {
+	color: red;
+
+/*	background-size: auto, cover;
+	background: url("../images/sumobg.jpg");
+	background-size: 100% 100%;
+    background-repeat: no-repeat*/
+
+}
+
+
 
 /*.deathPanel {
 	background-color: #494949;
