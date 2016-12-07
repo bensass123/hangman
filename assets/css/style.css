@@ -18,6 +18,7 @@
 }
 
 .jumboClass {
+	float: left;
 	width: 307px;
 	padding-right: 45px;
 	padding-left: 45px;
@@ -29,24 +30,23 @@
 }
 
 .win {
-	width: 200px;
-	text-align: center;
-	position: relative;
-	left: 43px;
+    width: 200px;
+    text-align: center;
+    position: relative;
+    left: 43px;
 }
 
 .guesses {
-/*	font-family: 'Cinzel', serif;*/
-	font-family: 'Hirosht', sans-serif;
-	position: relative;
-	left: 43px;
-	width: 200px;
+    font-family: 'Hirosht', sans-serif;
+    position: relative;
+    left: 43px;
+    width: 200px;
     text-align: center;
 }
 
 .wrongs {
-	letter-spacing: 4px;
-	font-family: 'Takeout', sans-serif;
+    letter-spacing: 4px;
+    font-family: 'Takeout', sans-serif;
     position: relative;
     top: 32px;
     left: 43px;
@@ -80,37 +80,47 @@
 
 }
 
-.man {
-	position: absolute;
-	top: 103px;
-	bottom: 0;
-	left: 634px;
-	border-radius: 25px;
+.man {	
+	z-index: 2;
+    float: right;
+    position: relative;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    border-radius: 25px;
     padding-left: 12px;
     background: white;
 }
 
+#win {
+
+}
+
+.hiddenStory {
+    visibility: hidden;
+    height: 0;
+}
+
 .winnerStory{
-	color: red;
-    position: absolute;
-    top: 201px;
-    left: 734px;
-    width: 200px;
+    color: red;
+    width: 300px;
+    position: relative;
+    left: 0px;
+    top: 85px;
+    padding-top: 49px;
+    padding-right: 48px;
+    z-index: 1;
+    /* float: right; */
     font-size: 22px;
     text-align: center;
     font-family: 'Takeout', sans-serif;
+    float: right;
 }
 
 body {
 	color: #ffff00;
 	background-image: url("../images/sumopattern.jpg");
 	font-family: 'Hirosht', sans-serif;
-	
-
-/*	background-size: auto, cover;
-	background: url("../images/sumobg.jpg");
-	background-size: 100% 100%;
-    background-repeat: no-repeat*/
 }
 
 

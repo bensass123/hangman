@@ -54,6 +54,7 @@
           console.log(wins);
           gameOver = true;
           restart();
+          $("#winnerStory").addClass('hiddenStory');
        }, delay);            
 
       }
@@ -195,6 +196,7 @@
         document.getElementById("man").style.height = "0px";
         wins+=1;
         document.getElementById("win").innerHTML = ("Wins: " + wins);
+        $(".winnerStory").removeClass('hiddenStory');
         endGame();
       }
 

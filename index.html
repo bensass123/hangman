@@ -7,6 +7,7 @@
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Bungee+Shade|Cinzel|Eagle+Lake|Walter+Turncoat" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <link rel="stylesheet" type="text/css" href="https://csshake.surge.sh/csshake.min.css">
@@ -34,7 +35,11 @@
         </div>
       </div>
 
-      <p class ="winnerStory">You have saved King Sumo, the ruler of all Sumos. He rewards you with a bag of Sumo Gold and 40 lbs of rice.</p>
+      <canvas class = "man" id="man" width="400" height="550">
+         Your browser does not support HTML5 canvas. Sorry Charlie.
+      </canvas>
+
+      <p id ="winnerStory" class = "winnerStory hiddenStory">You have saved King Sumo, the ruler of all Sumos. He rewards you with a bag of Sumo Gold and 40 lbs of rice.</p>
 
 
       <h2 id ="win" class="win">Wins: <span class ="wins">0</span></h2>
@@ -49,9 +54,7 @@
 
       
       
-      <canvas class = "man" id="man" width="400" height="550">
-         Your browser does not support HTML5 canvas. Sorry Charlie.
-      </canvas>
+
 
 
 
