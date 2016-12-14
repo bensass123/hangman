@@ -26,7 +26,7 @@
       });
       
 
-    	// initial method calls
+    	// initial method calls here
       function restart(){
         //reset you lose text to sumo gold amount
         $("#loser").html("Bags of Sumo Gold: <span id = \"wins\">0</span>");
