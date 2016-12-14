@@ -34,10 +34,22 @@
     text-align: center;
     position: relative;
     left: 43px;
+    top: 30px;
 }
 
+.anyKey {
+    color: red;
+    z-index: 50;
+}
+
+.reset {
+    position: relative;
+    top: 93px;
+}
+
+
 .guesses {
-    font-family: 'Hirosht', sans-serif;
+    font-family: 'Takeout', sans-serif;
     position: relative;
     left: 43px;
     width: 200px;
@@ -48,7 +60,7 @@
     letter-spacing: 4px;
     font-family: 'Takeout', sans-serif;
     position: relative;
-    top: 32px;
+    top: 4px;
     left: 43px;
     width: 200px;
     text-align: center;
@@ -63,15 +75,13 @@
 }
 
 .title{
-/*	font-family: 'Bungee Shade', cursive;*/
-	font-family: 'Hirosht', sans-serif;
+	font-family: 'Takeout', sans-serif;
 	position: relative;
-    left: 442px;
+
     text-align: center;
     color: white;
     background: crimson;
     border-radius: 25px;
-    width: 31%;
     padding: 5px;
     padding-top: 9px;
 }
@@ -92,9 +102,6 @@
     background: white;
 }
 
-#win {
-
-}
 
 .hiddenStory {
     visibility: hidden;
@@ -117,16 +124,24 @@
     float: right;
 }
 
+#guesses, #wrongs, #ricelbs, #wins {
+	color: red;
+}
+
+.wins {
+	color: red;
+}
+
 body {
 	color: #ffff00;
 	background-image: url("../images/sumopattern.jpg");
-	font-family: 'Hirosht', sans-serif;
+	font-family: 'Takeout', sans-serif;
 }
 
 
 @font-face {
-  font-family: "Hirosht";
-  src: url("../css/HIROSHT.TTF") format("truetype");
+  font-family: "Takeout";
+  src: url("../css/Takeout.TTF") format("truetype");
 }
 
 @font-face {

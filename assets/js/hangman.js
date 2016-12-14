@@ -15,12 +15,21 @@
       var sumoStatus;
       var word;
       var wins = 0;
+      var keyPressed = false;
 
+      unloadScrollBars();
       restart();
+
+      //event listener for reset button
+      $( ".reset" ).click(function() {
+        restart();
+      });
       
 
     	// initial method calls
       function restart(){
+        //reset you lose text to sumo gold amount
+        $("#loser").html("Bags of Sumo Gold: <span id = \"wins\">0</span>");
         //resets shaking
         document.getElementById("man").className = "man"; 
         // reset variables
@@ -33,7 +42,8 @@
         guessesLeft = 9;
         sumoStatus = guessesLeft;
         document.getElementById("guesses").innerHTML = guessesLeft;
-        document.getElementById("win").innerHTML = ("Wins: " + wins);
+        $("#ricelbs").text(wins*40);
+        $("#wins").text(wins);
         
         word = pickWord();
         createHangWord();
@@ -42,10 +52,15 @@
         document.getElementById("word").innerHTML = stringWord;
         wrongString = wrongLetters.join("");
         document.getElementById("wrongs").innerHTML = wrongString;
+
       }
 
+      // function pressAnyKey(){
+      //   keyPressed = true;
+      // }
+
       function endGame(){
-        var delay=5000; //1.5 seconds
+        var delay=7000; //1.5 seconds
 
               // show final frame 
 
@@ -82,6 +97,8 @@
   		console.log(r);
   		return word;
   	}
+
+
 
   	function createHangWord(){
   		for (i = 0; i < word.length; i++){
@@ -159,7 +176,7 @@
               }
 
               // add delay
-              var delay=1500; //1.5 seconds
+              var delay=4500; //1.5 seconds
 
               // show final frame 
 
@@ -195,39 +212,43 @@
       function youWin() {
         document.getElementById("man").style.height = "0px";
         wins+=1;
-        document.getElementById("win").innerHTML = ("Wins: " + wins);
+        $("#wins").text(wins);
         $(".winnerStory").removeClass('hiddenStory');
+        $("#ricelbs").text(wins*40);
         endGame();
       }
 
+
+                //key detection
     	document.onkeyup = function (event) {
-        //old key detection
-    			// var letter = event.key;
-    			// letter = letter.toLowerCase();
+          if (!keyPressed) {
+            keyPressed = true;
+            $('.anyKey').html("");
+          }
+          else {
+            var letter = String.fromCharCode(event.keyCode).toLowerCase();
+            console.log(letter);
+      			if(isLetter(letter) && guessesLeft > 0){
+    	  			addGuess(letter, replaceCorrects(letter));
+    	  			console.log(hangWord);
+    	  			console.log(win());
+    	  			stringWord = hangWord.join("");
+    	  			document.getElementById("word").innerHTML = stringWord;
+    	  			if (win()){
+    	  				youWin();
+    	  			}
+    	  			if (!isGuessRight(letter)) {
+    	  				addWrong(letter);
+    	  			}
 
-          //new key detection
-          var letter = String.fromCharCode(event.keyCode).toLowerCase();
-          console.log(letter);
-    			if(isLetter(letter) && guessesLeft > 0){
-  	  			addGuess(letter, replaceCorrects(letter));
-  	  			console.log(hangWord);
-  	  			console.log(win());
-  	  			stringWord = hangWord.join("");
-  	  			document.getElementById("word").innerHTML = stringWord;
-  	  			if (win()){
-  	  				youWin();
-  	  			}
-  	  			if (!isGuessRight(letter)) {
-  	  				addWrong(letter);
-  	  			}
+    	  			
 
-  	  			
-
-  	  			if (guessesLeft === 0) {
-  	  				document.getElementById("win").innerHTML = "YOU LOSE!";
-              endGame();
-            }
-    			}
+    	  			if (guessesLeft === 0) {
+    	  				$('#loser').text("YOU LOSE!");
+                endGame();
+              }
+      			}
+        }
 
     	}
 
@@ -247,4 +268,15 @@
 
     	document.getElementById("word").innerHTML = stringWord;
     	// document.getElementById("wrongs").innerHTML = wrongString;
+
+
+      function reloadScrollBars() {
+           document.documentElement.style.overflow = 'auto';  // firefox, chrome
+           document.body.scroll = "yes"; // ie only
+           }
+
+        function unloadScrollBars() {
+          document.documentElement.style.overflow = 'hidden';  // firefox, chrome
+          document.body.scroll = "no"; // ie only
+          }
 
